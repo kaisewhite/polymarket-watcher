@@ -161,7 +161,7 @@ export class PolymarketWatcherStack extends cdk.Stack {
 
     // Inngest dev server sidecar
     taskDef.addContainer(`${constructorPrefix}-inngest-sidecar`, {
-      image: ecs.ContainerImage.fromRegistry("public.ecr.aws/mostrom/inngest:latest"),
+      image: ecs.ContainerImage.fromRegistry("inngest/inngest:latest"),
       memoryLimitMiB: 512,
       cpu: 256,
       essential: false,
